@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How the Internet work?</title>
+    </head>
+    <body>
+        <h1>How the Internet work?</h1>
+        <h2>1. Browsing the Web?</h2>
+        <ol>
+            <img src="/image/how-the-internet-work-1.png" height ="150">
+            <li>User accesses a web browser (desktop web browser/ mobile web browser), types an URL Google.com into the location bar and hits Enter.</li>
+            <li>We ask a question who's this Google.com fellow? And that question gets asked all the way down to our ISP - Internet Service Provider.</li>
+            <li>IPS gets that request and they send that off to something called the DNS - Domain Name Service. Essentially it's a phone book has the list of all these URLs like Google.com and the addresses of them.</li>
+            <li>DNS sends off that request back through the ISP and the website or the web browser, Google Chrome in this case gets "172.217.7.23" - an IP address.</li>
+            <img src="/image/how-the-internet-work-2.png" height="150">
+            <li>The browser receives this IP address, then sends off another request to the Google servers.</li>
+            <img src="/image/how-the-internet-work-3.png" height="150">
+            <li>Google servers send text files (HTML, CSS, Javascript) to the browser and the browser will render and display the HTML content, and execute scripts (if have).</li>
+        </ol>
+        <h2>2. The Internet backbone</h2>
+        <p>Imagine the internet as a massive highway connecting different cities. Now, the internet backbone is like the main highways that connect all those cities together. It's a super-fast and reliable network that carries lots of internet data between different places.</p>
+        <p>Some examples of internet backbone providers include:</p>
+        <ul>
+            <li>Viettel: Viettel is one of the leading telecommunication companies in Vietnam and operates a substantial portion of the country's internet backbone.</li>
+            <li>VNPT is a state-owned telecommunications company in Vietnam. They have an extensive network that serves as a backbone for internet services in the country.</li>
+            <li>FPT Telecom: FPT Telecom is a major internet service provider in Vietnam. They have developed their own backbone network and provide reliable internet connectivity to residential and business customers.</li>
+        </ul>
+        <p>In simple terms, the internet backbone is like the superhighway of the internet, carrying data between different places at incredible speeds.</p>
+        <h2>3. Traceroute</h2>
+        <p>Traceroute is a tool that shows you the path your internet data takes from your computer to a destination, like a website. It helps you find out which routers or devices your data passes through and measures the time it takes for the data to reach each one.</p>
+        <p>Let's say you want to traceroute to "www.example.com". When you run the traceroute command, you might see something like this:</p>
+        <ol>
+            <li>192.168.1.1 (Your home router) - 1ms</li>
+            <li>10.0.0.1 (Your ISP's router) - 10ms</li>
+            <li>203.0.113.1 (Internet Service Provider) - 15ms</li>
+            <li>72.14.203.99 (Google's router) - 20ms</li>
+            <li>216.239.41.27 (Google's server) - Destination reached!</li>
+        </ol>
+        <p>In this example, the traceroute starts from your home router, then goes through your ISP's router, and further through your internet service provider's network. Eventually, it reaches a router owned by Google and finally reaches the destination server.</p>
+    </body>
+</html>

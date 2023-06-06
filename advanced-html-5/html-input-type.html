@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Input Types</title>
+</head>
+<body>
+    <a href="/advanced-html-5/html-form.html">Go Back</a>
+    <h1>HTML Input Types</h1>
+    <h4>Text Field</h4>
+    <p>The <code>&lt;input type="text"&gt;</code> defines a single-line input field for text input.</p>
+    <!--Example as below-->
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+    </form>
+
+    <h4>Radio Buttons</h4>
+    <p>The <code>&lt;input type="radio"&gt;</code> defines a radio button. Radio buttons let a user select ONE of a limited number of choices.</p>
+    <!--Example as below-->
+    <p>Choose your favorites language:</p>
+    <form>
+        <input type="radio" name="fav_language">Française<br>
+        <input type="radio" name="fav_language">Norwaygian<br>
+        <input type="radio" name="fav_language">English<br>
+    </form>
+
+    <h4>Checkboxes</h4>
+    <p>The <code>&lt;input type="checkbox"&gt;</code> defines a checkbox. Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+    <!--Example as below-->
+    <p>What are your favorite croissants?</p>
+    <form>
+        <input type="checkbox">Pain Au Chocolat<br>
+        <input type="checkbox">Croissant Au Beurre<br>
+        <input type="checkbox">Croissant Aux Amandes<br>
+    </form>
+
+    <h3>The Submit button</h3>
+    <p>The <code>&lt;input type="submit"&gt;</code> defines a button for submitting the form data to a form-handler.</p>
+    <ul>
+        <li>The form-handler is typically a file on the server with a script for processing input data.</li>
+        <li>The form-handler is specified in the form's action attribute.</li>
+    </ul>
+    <!--Example as below-->
+    <form>
+        <input type="submit" value="Click me!">
+    </form>
+</body>
+</html>

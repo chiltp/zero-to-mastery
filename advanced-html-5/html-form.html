@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced HTML</title>
+</head>
+<body>
+    <h1>Advanced HTML</h1>
+    <h2>HTML Form</h2>
+    <p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+    <a href="/advanced-html-5/html-form-element.html">HTML Form Elements</a><br>
+    <a href="/advanced-html-5/html-input-type.html">HTML Input Types</a>
+
+    <h4>The Name Attribute for &lt;input&gt;</h4>
+    <p>Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.</p>
+    <!--Example as above-->
+    <p style="background-color:antiquewhite;">The "name" attribute serves two primary purposes:
+        <ol>
+            <li>Grouping: By giving radio buttons the same "name" attribute, you specify that they belong to a common group. In this case, all the radio buttons with the "name" attribute set to "fav_language" are part of the same group.</li>
+            <li>Selection Limitation: The "name" attribute ensures that only one radio button in the group can be selected at a time. When a user selects one option, it automatically deselects any other radio button with the same "name" attribute within the group.</li>
+        </ol>
+        </p>
+
+    <hr>
+    <mark>My practice area</mark>
+    <form>
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="bday">Birthday</label><br>
+        <input type="date" id="bday" name="bday"><br>
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email"><br>
+        <lable for="pwd">Password</lable><br>
+        <input type="password" id="pwd" minlength="8"><br><br>
+        <input type="submit" value="REGISTER!"> 
+    </form>
+</body>
+</html>

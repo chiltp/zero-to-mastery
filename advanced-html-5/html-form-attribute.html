@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Form Attributes</title>
+</head>
+<body>
+    <a href="/advanced-html-5/html-form.html">Go Back</a>
+    <h1>HTML Form Attributes</h1>
+    <h2>The Action Attribute</h2>
+    <p>The <code>action</code> attribute essentially determines where the form data goes after submission, allowing you to send it to a specific URL or script for further processing.</p>
+    <img src="/image/html-form-attribute-action.png" width="550">
+    <p>In this example, the <code>action</code> attribute is set to "https://www.example.com/submit-form", indicating that when the form is submitted, the data will be sent to that URL. The method attribute specifies the HTTP method to be used (POST in this case).</p>
+    <p><strong>Note:</strong><mark> If the action attribute is omitted, the action is set to the current page.</p>
+    
+    <h2>The Method Attribute</h2>
+    <p>The <code>method</code> determines how the form data is delivered to the server—whether it's appended to the URL using the "GET" method or sent separately using the "POST" method.</p>
+    <h3>1. GET method</h3>
+    <p>When you use the GET method, the form data is appended to the URL in the form of query parameters. It's like writing the package contents on the outside of the package. This method is commonly used when you want to retrieve or search for data from the server.</p>
+    <img src="/image/html-form-attribute-get-method.png" width="550">
+    <p>In this example, a search form is created. When the user submits the form, the form data (the query entered by the user) will be appended to the URL as query parameters. For instance, if the user searches for "apple," the URL will become: https://www.example.com/search?query=apple. This allows the server to process the query parameter and return relevant search results.</p>    
+    
+    <h3>2. POST method</h3> 
+    <p>When you use the POST method, the form data is sent separately from the URL, like an enclosed package. This method is commonly used when you want to send sensitive information or when the form data can modify or update data on the server.</p>
+    <img src="/image/html-form-attribute-post-method.png" width="550">
+    <p>In this example, a login form is created. When the user submits the form, the form data (the entered username and password) will be sent separately from the URL. The data is not visible in the URL, which is important for sensitive information like passwords. The server can then handle the submitted data securely and perform authentication or authorization processes.</p>
+    <p><strong>Tip:</strong><mark> Always use POST if the form data contains sensitive or personal information!</mark>
+</body>
+</html>

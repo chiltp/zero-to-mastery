@@ -6,17 +6,39 @@
 <body>
     <a href="/advanced-html-5/html-form.html">Go Back</a>
     <h1>HTML Input Types</h1>
-    <h4>Text Field</h4>
+    <h2>1. Text</h2>
     <p>The <code>&lt;input type="text"&gt;</code> defines a single-line input field for text input.</p>
     <!--Example as below-->
     <form>
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname">
     </form>
 
-    <h4>Radio Buttons</h4>
+    <h2>2. Password</h2>
+    <p>The <code>&lt;input type="password"&gt;</code> defines a password field.</p>
+    <!--Example as below-->
+    <form>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd">
+    </form>
+
+    <h2>3. Submit</h2>
+    <p>The <code>&lt;input type="submit"&gt;</code> defines a button for submitting form data to a form-handler. The form-handler is typically a server page with a script for processing input data.</p>
+    <!--Example as below-->
+    <form>
+        <input type="submit" value="Submit">
+    </form>
+    <p><strong>Note:</strong> <mark>If you omit the submit button's value attribute, the button will get a default text.</mark></p>
+
+    <h2>4. Reset</h2>
+    <p>The <code>&lt;input type="reset"&gt;</code> defines a reset button that will reset all form values to their default values.</p>
+    <!--Example as below-->
+    <form>
+        <input type="reset">
+    </form>
+    <p><strong>Note:</strong> <mark>If you change the input values and then click the "Reset" button, the form-data will be reset to the default values.</mark></p>
+
+    <h2>5. Radio</h2>
     <p>The <code>&lt;input type="radio"&gt;</code> defines a radio button. Radio buttons let a user select ONE of a limited number of choices.</p>
     <!--Example as below-->
     <p>Choose your favorites language:</p>
@@ -26,7 +48,7 @@
         <input type="radio" name="fav_language">English<br>
     </form>
 
-    <h4>Checkboxes</h4>
+    <h2>6. Checkboxes</h2>
     <p>The <code>&lt;input type="checkbox"&gt;</code> defines a checkbox. Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
     <!--Example as below-->
     <p>What are your favorite croissants?</p>
@@ -34,17 +56,6 @@
         <input type="checkbox">Pain Au Chocolat<br>
         <input type="checkbox">Croissant Au Beurre<br>
         <input type="checkbox">Croissant Aux Amandes<br>
-    </form>
-
-    <h3>The Submit button</h3>
-    <p>The <code>&lt;input type="submit"&gt;</code> defines a button for submitting the form data to a form-handler.</p>
-    <ul>
-        <li>The form-handler is typically a file on the server with a script for processing input data.</li>
-        <li>The form-handler is specified in the form's action attribute.</li>
-    </ul>
-    <!--Example as below-->
-    <form>
-        <input type="submit" value="Click me!">
     </form>
 </body>
 </html>

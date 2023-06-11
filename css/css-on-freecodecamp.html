@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS on freeCodeCamp</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <style>
+        h1 {
+            color:plum;
+        }
+        .darkcyan-text {
+            color: darkcyan
+        }
+        .text-30px {
+            font-size: 30px;
+            background-color:beige;
+        }
+        a, .text-30px {
+            font-family:sans-serif
+        }
+        .lobster-font {
+            font-family: lobster;
+        }
+        .smaller-image {
+            width: 500px
+        }
+        .thin-pink-border {
+            border-style:dashed;
+            border-color: palevioletred;
+            border-width: 2px;
+        }
+        .brownie-cake {
+            width: 200px;
+            border-radius: 20%;
+        }
+        .background-color-green {
+            background-color: lightgreen;
+        }
+        #cat-photo-form {
+            background-color: silver;
+        }
+
+    </style>
+    <h1>CSS on freeCodeCamp</h1>
+    <h2 class="darkcyan-text">1. Use a CSS Class to Style an Element</h2>
+    
+    <h2>2. Style Multiple Elements with a CSS Class</h2>
+    <!--style <p> and <h2> with the same color-->
+    <p class="darkcyan-text">Click here to view more <a href="#">Chi's photos</a>.</p>
+
+    <h2>3. Change the Font Size of an Element</h2>
+    <p class="text-30px">Bonjour, ça va?</p>
+
+    <h2>4. Set the Font Family of an Element</h2>
+    <!--Set <a> and class .text.30px font to sans-serif-->
+    
+    <h2>5. Import a Google Font</h2>
+    <p>In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website. There are many sources for web fonts on the Internet. For this example we will focus on the Google Fonts library. Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.</p>
+    <!--Set <p> having class "lobster-font" to lobster font-->
+    <p class="lobster-font">Import a Google Font by copying and pasting the following code snippet into the top of your code editor (before the opening style element):</p>
+    <code style="background-color:lightblue;">&lt;link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"&gt;</code>
+
+    <h2>6. Specify How Fonts Should Degrade</h2>
+    <p>There are several default fonts that are available in all browsers. These generic font families include monospace, serif and sans-serif.</p>
+    <p>When one font isn't available, you can tell the browser to "degrade" to another font.</p>
+    <p><strong>Notes:</strong> Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords. Example: sans-serif, Helvetica.</p>
+    <!-- Degrade lobster to monospace if lobster font isn't available
+        .lobster-font {
+            font-family: lobster; monospace
+        }
+    -->
+
+    <h2>7. Size Images</h2>
+    <!--Set image size having class="smaller-image" to a width of 500 pixels-->
+    <img class="smaller-image thin-pink-border" src="/image/how-the-internet-works-1.png">
+
+    <h2>8. Add Borders Around Your Elements</h2>
+    <!--Set a border for class="thin-pink-border"-->
+    <p>Remember that you can apply multiple classes to an element using its <code>class</code> attribute, by separating each class name with a space. For example:</p>
+    <code style="background-color:lightblue;">&lt;img class="class1 class2"&gt;</code>
+
+    <h2>9. Add Rounded Corners with border-radius</h2>
+    <!--Set a border for class="brownie-cake"-->
+    <img class="brownie-cake" src="https://i2.wp.com/lmld.org/wp-content/uploads/2023/02/French-Silk-Brownies-6.jpg">
+
+    <h2>10. Give a Background Color to a div Element</h2>
+    <div class="background-color-green">
+        <p>This is a paragraph</p>
+        <p>This is another paragraph</p>
+    </div>
+
+    <h2>11. Set the id of an Element</h2>
+    <ul>
+        <li>In addition to classes, each HTML element can also have an id attribute.</li><br>
+        <li>There are several benefits to using id attributes: You can use an id to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.</li><br>
+        <li>id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same id attribute.</li><br>
+    </ul>
+    <!--set a form an id attibute-->
+    <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
+        <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+        <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+        <label><input type="checkbox" name="personality" checked> Loving</label>
+        <label><input type="checkbox" name="personality"> Lazy</label>
+        <label><input type="checkbox" name="personality"> Energetic</label><br><br>
+        <input type="text" placeholder="cat photo URL" required>
+        <button type="submit">Submit</button>
+      </form>
+
+    <h2>12. Use an id Attribute to Style an Element</h2>
+    <p>One cool thing about id attributes is that, like classes, you can style them using CSS.</p>
+    <p>However, an id is not reusable and should only be applied to one element. An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.</p>
+    <!--Set id="cat-photo-form" have silver background-->
+
+    <h2>13. Adjust the Padding of an Element</h2>
+    <p>An element's <code>padding</code> controls the amount of space between the element's content and its <code>border</code>.</p>
+    <div>
+        <style>
+            .injected-text {
+              margin-bottom: -25px;
+              text-align: center;
+            }
+            .box {
+              border-style: solid;
+              border-color: black;
+              border-width: 2px;
+              text-align: center;
+            }
+            .yellow-box {
+              background-color:lightgoldenrodyellow;
+              padding: 20px 40px 20px 40px;
+            }
+            .red-box {
+              background-color:lightcoral;
+              color: #fff;
+              padding: 20px;
+              margin: 20px;
+            }
+        </style>
+        <h5 class="injected-text">margin</h5>
+        <div class="box yellow-box">
+            <h5 class="box red-box">padding</h5>
+        </div>
+    </div>
+
+    <h2>14. Adjust the Margin of an Element</h2>
+    <p>An element's <code>margin</code> controls the amount of space between an element's border and surrounding elements.</p>
+
+    <h2>15. Add a Negative Margin to an Element</h2>
+    <p>If you set an element's margin to a negative value, the element will grow larger.</p>
+    <!--
+        .red-box {
+            background-color: lightcoral;
+            color: #fff;
+            margin: -15;
+        }
+    -->
+
+    <h2>16. Add Different Padding and Margin to Each Side of an Element</h2>
+    <ul>
+        <li>Sometimes you will want to customize an element so that it has different amounts of padding/margin on each of its sides.</li>
+        <li>CSS allows you to control the padding of all four individual sides of an element with the padding-top, padding-right, padding-bottom, and padding-left/margin-top, margin-right, margin-bottom, and margin-left properties.</li>
+    </ul>
+    <!--
+        .red-box {
+            background-color: lightcoral;
+            color: #fff;
+            padding-top: 40px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+        }
+    -->
+
+    <h2>17. Use Clockwise Notation to Specify the Padding and Margin of an Element</h2>
+    <code style="background-color: lightblue;">padding: 10px 20px 10px 20px;</code><br>
+    <code style="background-color: lightblue;">margin: 10px 20px 10px 20px;</code>
+    <p>These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific padding/margin instructions.</p>
+
+    <h2>18. Use Attribute Selectors to Style Elements</h2>
+    <p>Use [attr=value] attribute selector to style the checkboxes in CatPhotoApp. This selector matches and styles elements with a specific attribute value. Example:</p>
+    <code>[type='radio'] { <br>
+        margin: 20px 0px 20px 0px; <br>
+      }
+    </code><br><br>
+    <div>
+        <style>
+            [type='checkbox'] {
+                margin: 10px 0px 5px 0px;
+            }
+        </style>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+            <label><input type="checkbox" name="personality"> Lazy</label>
+            <label><input type="checkbox" name="personality"> Energetic</label><br><br>
+        </form>
+    </div>
+
+    <h2>19. Understand Absolute versus Relative Units</h2>
+    <p>The two main types of length units are absolute and relative.</p>
+    <ul>
+        <li>Absolute units tie to physical units of length. For example, in and mm refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.</li>
+        <li>Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font. If you use it to set the font-size property itself, it's relative to the parent's font-size.</li>
+    </ul>
+    
+    <h2>20. Override Styles in Subsequent CSS</h2>
+    <style>
+        .yellow-text {
+            color:rgb(221, 197, 133) !important;
+        }
+        .pink-text {
+          color: pink;
+        }
+        .blue-text {
+          color: blue;
+        }
+        #orange-text {
+            color:orange;
+        }
+        
+    </style>
+    <p class="pink-text blue-text">Bon soir!</p>
+    <p><strong>Notes:</strong> It doesn't matter which order the classes are listed in the HTML element. However, the order of the class declarations in the <code>style</code> section is what is important. The second declaration will always take precedence over the first. Because .blue-text is declared second, it overrides the attributes of .pink-text.</p>
+
+    <h2 class="blue-text pink-text" id="orange-text">21. Override Class Declarations by Styling ID Attributes</h2>
+
+    <h2 class="blue-text pink-text" style="color:slategray">22. Override Class Declarations with Inline Styles</h2>
+
+    <h2 class="yellow-text blue-text">23. Override All Other Styles by using Important</h2>
+
+    <h2>24. Use Abbreviated Hex Code</h2>
+    <p>For example, red's hex code #FF0000 can be shortened to #F00. This shortened form gives one digit for red, one digit for green, and one digit for blue.</p>
+    <p>This reduces the total number of possible colors to around 4,000. But browsers will interpret #FF0000 and #F00 as exactly the same color.</p>
+
+    <h2>25. Create a custom CSS Variable</h2>
+    <p>To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this:</p>
+    <code style="background-color: lightblue;">--penguin-skin: gray;</code>
+    <p>This will create a variable named --penguin-skin and assign it the value of gray. Now you can use that variable elsewhere in your CSS to change the value of other properties to gray.</p>
+
+    <h2>26. Use a custom CSS Variable</h2>
+    <p>After you create your variable, you can assign its value to other CSS properties by referencing the name you gave it.</p>
+    <code style="background-color: lightblue;">background: var(--penguin-skin);</code>
+
+    <h2>27. Attach a Fallback value to a CSS Variable</h2>
+    <p>When using your variable as a CSS property value, you can attach a fallback value that your browser will revert to if the given variable is invalid.</p>
+    <p><strong>Note:</strong> This fallback is not used to increase browser compatibility, and it will not work on IE browsers. Rather, it is used so that the browser has a color to display if it cannot find your variable.</p>
+    <code style="background-color: lightblue;">background: var(--penguin-skin, black);</code>
+
+    <h2>28. Inherit CSS Variables</h2>
+    <p><code>:root</code> is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.</p>
+
+    <h2>29. Change a variable for a specific area</h2>
+    <p>When you create your variables in :root they will set the value of that variable for the whole page. You can then overwrite these variables by setting them again within a specific selector.</p>
+    <style>
+        :root {
+          --penguin-size: 300px;
+          --penguin-skin: black;
+          --penguin-belly: white;
+          --penguin-beak: orange;
+        }
+        @media (max-width: 350px) {
+         :root {
+          --penguin-size: 300px;
+          --penguin-skin: black;
+         }
+        }
+        .penguin {
+          --penguin-skin: gray;
+          position: relative;
+          margin: auto;
+          display: block;
+          margin-top: 5%;
+          width: 300px;
+          height: 300px;
+        }
+      
+        .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .penguin * {
+    position: absolute;
+  }
+</style>
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+</body>
+</html>

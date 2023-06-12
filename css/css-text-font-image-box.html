@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet">
+    <!--To use multiple Google fonts: 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    -->    
+    <title>Text and Font</title>
+</head>
+<body>
+    <style>
+        h1 {
+            /*Sets all the text-decoration properties in one declaration*/
+            text-decoration: underline;
+            /*Controls the capitalization of text*/
+            text-transform: uppercase;
+        }
+        #moirai {
+            /*The line-height property is used to specify the space between lines*/
+            line-height: 5px;
+            /*The font-style property is mostly used to specify italic text*/
+            font-style: italic;
+            /*The font-weight property specifies the weight of a font*/
+            font-weight: bold;
+            font-size: small;
+            /*Use the font-family property to specify the font of a text.*/
+            font-family: 'Moirai One', cursive;
+        }
+        .float-image {
+            /*The float property is used for positioning and formatting content e.g. let an image float left to the text in a container.*/
+            float: right; 
+        }
+        footer {
+            /*The clear property specifies what should happen with the element that is next to a floating element*/
+            clear: both;
+            text-align: center;
+        }
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            padding: 20px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+        
+    </style>
+    <h1>Lorem Ipsum</h1>
+    <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+    <h5>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+    <img class="float-image" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fHww&w=1000&q=80" width="200">
+    <p id="moirai">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac laoreet quam. Donec ut augue pulvinar, eleifend metus id, ornare leo. Morbi massa ante, dictum id luctus ut, semper id arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum velit sed ex pulvinar, a dapibus risus egestas. Nam interdum eleifend ligula, eu aliquet arcu pharetra eu. In hac habitasse platea dictumst. Fusce eget enim ut sem dignissim tincidunt. Nunc pharetra elit aliquam, ultrices neque et, fringilla odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer blandit, ante sed finibus faucibus, leo felis eleifend arcu, ut euismod magna libero sed felis. Suspendisse potenti. Maecenas vulputate imperdiet urna, in volutpat orci convallis ut. Nulla hendrerit erat a sollicitudin hendrerit. Nullam ut quam a nulla pretium convallis.</p>
+    <footer>Copy right by Luong Thi Phuong Chi</footer>
+
+    <h2>Box Model</h2>
+    <img src="/image/css-boxmodel.png" width ="400">
+    <ul>
+        <li>The margin is the space outside the border. It creates a gap between elements.</li>
+        <li>The border is a line or an outline that surrounds the content and padding of an element. It can have different styles, colors, and widths.</li>
+        <li>Padding is the space between the content and the border. It provides a buffer area within the element. Padding is transparent by default and does not have any background color.</li>
+        <li>The content is the actual area inside the element where the text, images, or other media are displayed. It does not include the padding, border, or margin.</li>
+    </ul>
+    <div class="box">
+        <p>This is the content of the box.</p>
+    </div>
+
+    <!--
+        In this example, we have a <div> element with the class "box". It has a width of 200 pixels, height of 100 pixels, a yellow background color, and a 10-pixel margin around it.
+
+        Inside the <div>, we have a <p> element containing the text "This is the content of the box." The <p> element has 20 pixels of padding, a 2-pixel solid black border, and the content is displayed within the remaining space.
+
+        When you apply this CSS to the HTML, you'll see a yellow box with a 10-pixel margin around it. Inside the box, there is a 20-pixel padding, and a 2-pixel solid black border. The text "This is the content of the box" is displayed within the content area, surrounded by the padding.
+    -->
+</body>
+</html>

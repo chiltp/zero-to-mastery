@@ -10,17 +10,17 @@
         code{
             color:cadetblue;
         }
-        .text-color {
+        p.text-color {
             color: #000;
             background-color:khaki;
         }
-        div.text-alignment {
+        .description {
             background-color:beige;
         }
     </style>
     <h1>CSS Text</h1>
     <h2>1. Text Color</h2>
-    <p>The <code>color</code> property is used to set the color of the text. The color is specified by:</p>
+    <p class="description">The <code>color</code> property is used to set the color of the text. The color is specified by:</p>
     <ul class="text-color">
         <li>a color name - like "red"</li>
         <li>a HEX value - like "#ff0000"</li>
@@ -28,10 +28,128 @@
     </ul>
 
     <h2>2. Text Alignment</h2>
-    <div class="text-alignment">
-        <p>The <code>text-align</code> property is used to set the horizontal alignment of a text.</p>
-        <p>The <code>text-align-last</code> property specifies how to align the last line of a text.</p>
-        <p>The <code>vertical-align</code> property sets the vertical alignment of an element.</p>
-    </div>
+    <style>
+    /*Select and style elements with a title attribute containing the word "align"*/
+        [title~="align"]  {
+            background-color:beige;
+        }
+        .justify {
+            text-align: justify;
+        }
+    </style>
+    <p title="text align">The <code>text-align</code> property is used to set the horizontal alignment of a text.</p>
+        <p style="text-align: center;">text-align: center;</p>
+        <p style="text-align: left;">text-align: left;</p>
+        <p style="text-align: right;">text-align: right;</p>
+        <!--The text-align: justify; value stretches the lines so that each line has equal width (like in newspapers and magazines).-->
+        <p class="justify">text-align: justify; text-align: justify; text-align: justify; text-align: justify; text-align: justify; text-align: justify; text-align: justify; text-align: justify; </p>
+    
+    <p class="text-align-last" title="text align last">The <code>text-align-last</code> property specifies how to align the last line of a text.</p>
+    <style>
+        .text-align-last {
+            text-align-last: center;
+        }
+    </style>
+    <p title="vertical align">The <code>vertical-align</code> property sets the vertical alignment of an element.</p>
+    <style>
+        img.a {
+        vertical-align: baseline;
+        }
+        img.b {
+        vertical-align:text-top;
+        }
+        img.c {
+        vertical-align: text-bottom;
+        }
+        img.d {
+        vertical-align: sub;
+        }
+        img.e {
+        vertical-align: super;
+        }
+    </style>
+    <p>An <img class="a" src="sqpurple.gif" width="9" height="9"> image with a default alignment.</p> 
+    <p>An <img class="b" src="sqpurple.gif" width="9" height="9"> image with a text-top alignment.</p> 
+    <p>An <img class="c" src="sqpurple.gif" width="9" height="9"> image with a text-bottom alignment.</p>
+    <p>An <img class="d" src="sqpurple.gif" width="9" height="9"> image with a sub alignment.</p> 
+    <p>An <img class="e" src="sqpurple.gif" width="9" height="9"> image with a super alignment.</p>
+
+    <h2>3. Text Decoration</h2>
+    <style>
+        .text-decoration-line {
+            text-decoration-line:overline underline;
+        }
+        .text-decoration-color {
+            text-decoration-line: line-through;
+            text-decoration-color:hotpink;
+        }
+        .text-decoration-style {
+            text-decoration-line:overline;
+            text-decoration-style:wavy;
+        }
+        .text-decoration-thickness {
+            text-decoration-line: underline;
+            text-decoration-thickness: 25%;
+        }
+        .text-decoration {
+            text-decoration: underline darkblue double 5px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <p class="description text-decoration-line">The <code>text-decoration-line</code> property is used to add a decoration line to text.</p>
+    <p class="description text-decoration-color">The <code>text-decoration-color</code> property is used to set the color of the decoration line.</p>
+    <p class="description text-decoration-style">The <code>text-decoration-style</code> property is used to set the style of the decoration line.</p>
+    <p class="description text-decoration-thickness">The <code>text-decoration-thickness</code> property is used to set the thickness of the decoration line.</p>
+    <p class="description text-decoration">The <code>text-decoration property</code> is a shorthand property for:</p>
+    <ul>
+        <li>text-decoration-line (required)</li>
+        <li>text-decoration-color (optional)</li>
+        <li>text-decoration-style (optional)</li>
+        <li>text-decoration-thickness (optional)</li>
+    </ul>
+    <p><mark>Tips:</mark> All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. The text-decoration: none; is used to remove the underline from links</p>
+    <p>A link with no underline <a href="#">Hello guys!</a></p>
+
+    <h2>3. Text Transformation</h2>
+    <style>
+        .text-transform {
+            text-transform: capitalize;
+        }
+    </style>
+    <p class="description text-transform">The <code>text-transform</code> property is used to specify uppercase and lowercase letters in a text.</p>
+
+    <h2>4. Text Spacing</h2>
+    <style>
+        .text-indent {
+            text-indent: 50%
+        }
+        .letter-spacing {
+            letter-spacing: 2px;
+        }
+        .line-height {
+            line-height: 55px;
+        }
+        .word-spacing {
+            word-spacing: 10px;
+        }
+        .white-space {
+            white-space:nowrap;
+        }
+    </style>
+    <p class="description text-indent">The <code>text-indent</code> property is used to specify the indentation of the first line of a text.</p>
+    <p class="description letter-spacing">The <code>letter-spacing</code> property is used to specify the space between the characters in a text.</p>
+    <p class="description line-height">The <code>line-height</code> property is used to specify the space between lines</p>
+    <p class="description word-spacing">The <code>word-spacing</code> property is used to specify the space between the words in a text.</p>
+    <p class="description white-space">The <code>white-space</code> property specifies how white-space inside an element is handled.</p>
+
+    <h2>5. Text Shadow</h2>
+    <style>
+        .text-shadow {
+            text-shadow: 0 0 3px lightblue, 0 0 5px #fff;
+        }
+    </style>
+    <p class="description text-shadow">The <code>text-shadow</code> property adds shadow to text.</p>
 </body>
 </html>

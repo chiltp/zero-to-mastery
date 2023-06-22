@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS</title>
+</head>
+<body>
+    <style>
+        h2 {
+            font-family: fantasy;
+            font-size: 3em;
+            font-weight: 100;
+            border-bottom: 1px solid pink;
+            width: fit-content;
+        }
+        .container {
+            /*The flex container becomes flexible by setting the display property to flex*/
+            display:flex;
+            /*wrap: flex items will wrap onto multiple lines, from top to bottom*/
+            flex-wrap: wrap;
+            /*This defines the alignment along the main axis*/
+            justify-content: center;
+        }
+        img {
+            width: 200px;
+            height: 200px; 
+            margin: 5px;
+            /*Always specify the transition-duration property, otherwise the duration is 0s, and the transition will have no effect.*/
+            transition: all 1s;
+        }
+        img:hover {
+            /*The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.*/
+            transform: scale(1.1);
+        }
+        a:hover {
+            color: hotpink;
+        }
+    </style>
+    <h1>Advanced CSS</h1>
+    <h2>Flex Box</h2>
+    <img src="/image/flexbox-container.png">
+    <img src="/image/flexbox-item.png">
+    <p>Reference <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here</a></p>
+    <div class="container">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Chocolate_Croissant.webp">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/05/nutella-croissant.webp">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Pumpkin-Pie-Croissant.webp">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Peanut-Butter-Cups.webp">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Brie-and-Jam-2048x1364.webp">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Ham-And-Cheese-1.webp">
+    </div>
+
+    <h2>Responsive UI</h2>
+    <p>Responsive web design makes your web page look good on all devices.</p>
+    <p>Responsive web design uses only HTML and CSS.</p>
+    <p>Responsive web design is not a program or a JavaScript.</p>
+    <h3>Viewport</h3>
+    <ul>
+        <li>In CSS, the viewport refers to the visible area of a web page displayed within a browser window. It is essentially the area where the content of your webpage is rendered and displayed to the user.</li><br>
+        <li>The viewport is important for creating responsive web designs that adapt to different screen sizes and devices. By properly setting the viewport, you can control how your webpage is displayed and ensure that it looks good and functions well across various devices, such as desktops, laptops, tablets, and mobile phones.</li><br>
+        <li>To set the viewport, you can use the <code>&lt;meta&gt;</code> tag in the <code>&lt;head&gt;</code> section of your HTML document. Here's an example of how you can set the viewport:</li><br>
+            <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code><br>
+        <br><li>Here are a few common viewport properties you can use within the content attribute:</li><br>
+        <ul>
+            <li><b>width=device-widt</b>h: Sets the width of the viewport to the width of the device screen. This ensures that the webpage adjusts its layout based on the device's screen size.</li><br>
+            <li><b>initial-scale=1.0</b>: Sets the initial zoom level of the webpage. A value of 1.0 means no zoom, and the webpage will be displayed at its normal scale.</li><br>
+            <li><b>user-scalable=yes/no</b>: Specifies whether the user can zoom in or out of the webpage. Setting it to "yes" allows zooming, while "no" disables zooming.</li><br>
+            <li><b>minimum-scale=0.5</b> and <b>maximum-scale=2.0</b>: Define the minimum and maximum zoom levels, restricting the user from zooming below or above the specified values.</li>
+        </ul>
+    </ul>
+
+    <h2>Pseudo-class</h2>
+    <p>A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element.</p>
+    <p>For example, the styling of an anchor tag can be changed for its hover state using the :hover pseudo-class selector. Here's the CSS to change the color of the anchor tag to red during its hover state:</p>
+    <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+</body>
+</html>

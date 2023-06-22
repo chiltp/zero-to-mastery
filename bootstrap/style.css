@@ -1,0 +1,8 @@
+.btn-primary {
+    background-color: lightpink;
+}
+.btn-primary:hover {
+    background-color: hotpink;
+    transition-duration: 5s;
+    transition-delay: 1s;
+}
